@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns ="http://www.springframework.org/schema/beans" 
+    xmlns:dwr ="http://www.directwebremoting.org/schema/spring-dwr" 
+    xmlns:xsi ="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation ="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.directwebremoting.org/schema/spring-dwr http://www.directwebremoting.org/schema/spring-dwr-2.0.xsd" > 
+
+	<!-- 要加上以上粗体部分 
+  
+	<dwr:configuration>
+		<dwr:convert type="bean" class="com.test.dwrpush.Chat"></dwr:convert>
+		<dwr:convert type="bean" class="com.test.dwrpush.User"></dwr:convert>
+	</dwr:configuration>
+	<bean id="chatServer" class="com.test.dwrpush.SendPush">
+		<dwr:remote javascript="ChatServer"></dwr:remote>
+	</bean>
+	-->
+  <!-- Timer Task -->
+  <!-- 
+  <bean id="dwrTask" class="com.test.dwrpush.DWRService" lazy-init="default" autowire="default" />
+  <bean id="sendMsgTimeTask" class="org.springframework.scheduling.timer.ScheduledTimerTask" lazy-init="default" autowire="default" >
+    <property name="timerTask" ref="dwrTask"/>
+    <property name="period">
+      <value>3000</value>
+    </property>
+  </bean>
+  <bean class="org.springframework.scheduling.timer.TimerFactoryBean" lazy-init="default" autowire="default" >
+    <property name="scheduledTimerTasks">
+      <list>
+        <ref bean="sendMsgTimeTask"/>
+      </list>
+    </property>
+  </bean>
+	 -->
+</beans>

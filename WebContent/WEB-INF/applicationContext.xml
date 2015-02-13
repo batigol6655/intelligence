@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+
+  	<!-- 通道列表信息 -->
+  	<bean name="showAction" class="com.bringspring.gateway.action.showAction" scope="prototype">
+       <property name="showService"><ref bean="showService" /></property>
+    </bean>
+   <bean id="showService" class="com.bringspring.gateway.service.showServiceImp" scope="prototype">
+    <property name="showDao" ref="showDao"></property>
+</bean>
+    <bean id="showDao" class="com.bringspring.gateway.dao.showDao">
+         <property name="jdbcTemplate"><ref bean="SpringJdbcTemplate"/></property>      
+    </bean>
+</beans>
