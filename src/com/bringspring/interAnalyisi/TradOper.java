@@ -6,9 +6,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.bringspring.common.DBConnect;
 import com.bringspring.gateway.vo.CarPicture;
 import com.bringspring.gateway.vo.TradInfo;
+import com.intelligence.common.DBConnect;
 
 public class TradOper {
 	public DBConnect db = null;

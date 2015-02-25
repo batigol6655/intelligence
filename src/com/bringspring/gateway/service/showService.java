@@ -2,8 +2,8 @@ package com.bringspring.gateway.service;
 import java.sql.Blob;
 import java.util.List;
 
-import com.bringspring.common.Pagination;
 import com.bringspring.gateway.vo.TradInfo;
+import com.intelligence.common.Pagination;
 
 
 

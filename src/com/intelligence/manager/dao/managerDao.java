@@ -12,11 +12,11 @@ import com.bringspring.gateway.vo.CarPictureMapper;
 import com.bringspring.gateway.vo.PartMapper;
 import com.bringspring.gateway.vo.TradInfoMapper;
 import com.bringspring.gateway.vo.TradInfo;
-import com.bringspring.common.PageHelpper;
-import com.bringspring.common.Pagination;
+import com.intelligence.common.PageHelpper;
+import com.intelligence.common.Pagination;
 
 
-public class showDao extends JdbcDaoSupport  {
+public class managerDao extends JdbcDaoSupport  {
 	
 /**
  * 首页展示通道信息和图片信息

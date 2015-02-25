@@ -2,7 +2,7 @@ package com.intelligence.manager.vo;
 
 import java.util.Date;
 
-public class Part {
+public class ItContent {
 	private String hour;
     private String sum;
 	public String getHour() {

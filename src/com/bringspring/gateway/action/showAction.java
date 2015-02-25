@@ -25,11 +25,11 @@ import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.interceptor.ServletRequestAware;
 
 
-import com.bringspring.common.DisposalCode;
-import com.bringspring.common.Pagination;
 import com.bringspring.gateway.service.showService;
 import com.bringspring.gateway.vo.CarPicture;
 import com.bringspring.gateway.vo.TradInfo;
+import com.intelligence.common.DisposalCode;
+import com.intelligence.common.Pagination;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 

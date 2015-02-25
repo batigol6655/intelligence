@@ -13,11 +13,11 @@ import org.apache.mina.filter.codec.ProtocolDecoderOutput;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.bringspring.common.IDGenerate;
 import com.bringspring.gateway.vo.CarPicture;
 import com.bringspring.gateway.vo.TradInfo;
 import com.bringspring.interAnalyisi.AnalysisTools;
 import com.bringspring.interAnalyisi.TradOper;
+import com.intelligence.common.IDGenerate;
 
 public class DataDecoderEx extends CumulativeProtocolDecoder {
 	private static final Logger LOG = LoggerFactory

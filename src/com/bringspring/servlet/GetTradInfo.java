@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.bringspring.client.Client;
-import com.bringspring.common.DBConnect;
+import com.intelligence.common.DBConnect;
 
 public class GetTradInfo extends HttpServlet {
 	private static final long serialVersionUID = -5216193301182504458L;
