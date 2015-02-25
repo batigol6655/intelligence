@@ -1,4 +1,4 @@
-package com.bringspring.common;
+package com.intelligence.common;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;

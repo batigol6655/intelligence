@@ -1,4 +1,4 @@
-package com.bringspring.common;
+package com.intelligence.common;
 
 import java.io.File;
 import java.io.FileInputStream;

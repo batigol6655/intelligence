@@ -1,5 +1,5 @@
 
-package com.bringspring.common;
+package com.intelligence.common;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

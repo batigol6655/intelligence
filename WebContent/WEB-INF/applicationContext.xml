@@ -3,14 +3,16 @@
 <beans>
 
 
-  	<!-- 通道列表信息 -->
-  	<bean name="showAction" class="com.bringspring.gateway.action.showAction" scope="prototype">
-       <property name="showService"><ref bean="showService" /></property>
+  </bean>
+    
+    <!-- 标题信息 -->
+  	<bean name="managerAction" class="com.intelligence.manager.action.managerAction" scope="prototype">
+       <property name="managerService"><ref bean="managerService" /></property>
     </bean>
-   <bean id="showService" class="com.bringspring.gateway.service.showServiceImp" scope="prototype">
-    <property name="showDao" ref="showDao"></property>
+   <bean id="managerService" class="com.intelligence.manager.service.managerServiceImp" scope="prototype">
+    <property name="managerDao" ref="managerDao"></property>
 </bean>
-    <bean id="showDao" class="com.bringspring.gateway.dao.showDao">
+    <bean id="managerDao" class="com.intelligence.manager.dao.managerDao">
          <property name="jdbcTemplate"><ref bean="SpringJdbcTemplate"/></property>      
     </bean>
 </beans>
