@@ -3,7 +3,6 @@
 <beans>
 
 
-  </bean>
     
     <!-- 标题信息 -->
   	<bean name="managerAction" class="com.intelligence.manager.action.managerAction" scope="prototype">
@@ -15,4 +14,18 @@
     <bean id="managerDao" class="com.intelligence.manager.dao.managerDao">
          <property name="jdbcTemplate"><ref bean="SpringJdbcTemplate"/></property>      
     </bean>
+    
+    
+    <!-- show信息 -->
+    <bean name="showDAO" class="com.intelligence.view.dao.ShowDAO">
+    	<property name="jdbcTemplate"><ref bean="SpringJdbcTemplate"></ref></property>
+    </bean>
+    <bean name="showService" class="com.intelligence.view.service.ShowServiceImp">
+    	<property name="showDAO" ref="showDAO"></property>
+    </bean>
+    <bean name="showAction" class="com.intelligence.view.action.ShowAction">
+    	<property name="showService" ref="showService"></property>
+    	
+    </bean>
+    
 </beans>

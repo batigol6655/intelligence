@@ -8,11 +8,15 @@ public class ItContentMapper implements RowMapper{
 public ItContentMapper(){}
 
 public Object mapRow(ResultSet rs, int rowNum)throws SQLException{
-    ItContent trad = new ItContent();
+    ItContent content = new ItContent();
+    content.setId(rs.getString("ID"));
+    content.setBrand(rs.getString("BRAND"));
+    content.setPlatform(rs.getString("PLATFORM"));
+    content.setNumber(rs.getString("NUMBER"));
+    content.setColor(rs.getString("COLOR"));
+    content.setSuitable(rs.getString("SUITABLE"));
+    content.setContent(rs.getString("CONTENT"));
     
-    trad.setHour(rs.getString("HOUR"));
-    trad.setSum(rs.getString("SUM"));
-    
-    return trad;
+    return content;
   }
 }

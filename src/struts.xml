@@ -8,9 +8,9 @@
        <result-types>
             <result-type name="json" class="org.apache.struts2.json.JSONResult"/>
         </result-types>
-   
+   		
 
     </package>
-    <include file="struts-show.xml"></include>
+    <include file="struts-view.xml"></include>
 </struts>
 
