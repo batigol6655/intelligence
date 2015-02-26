@@ -1,3 +1,4 @@
+<%@page contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -38,6 +39,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav side-nav">
+          	<li class="active"><a href="../manager/list.action"><i class="fa fa-dashboard"></i> 产品信息</a></li>
             <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
             <li><a href="charts.html"><i class="fa fa-bar-chart-o"></i> Charts</a></li>
             <li><a href="tables.html"><i class="fa fa-table"></i> Tables</a></li>
@@ -118,7 +120,7 @@
           </ul>
         </div><!-- /.navbar-collapse -->
       </nav>
-		<div class="copyrights">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
+		<div class="copyrights">Collect from <a href="http://www.cssmoban.com/"  title="ç½ç«æ¨¡æ¿">ç½ç«æ¨¡æ¿</a></div>
       <div id="page-wrapper">
 
         <div class="row">

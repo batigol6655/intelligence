@@ -12,5 +12,6 @@
 
     </package>
     <include file="struts-view.xml"></include>
+    <include file="struts-manager.xml"></include>
 </struts>
 

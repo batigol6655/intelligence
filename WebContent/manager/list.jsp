@@ -1,4 +1,6 @@
+<%@page contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html>
+<%@taglib uri="/struts-tags" prefix="s" %>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -377,60 +379,38 @@
 
         <div class="row">
           <div class="col-lg-6">
-            <h2>Contextual Classes</h2>
+            <h2>产品列表</h2>
             <div class="table-responsive">
               <table class="table table-bordered table-hover table-striped tablesorter">
                 <thead>
                   <tr>
-                    <th>Page <i class="fa fa-sort"></i></th>
-                    <th>Visits <i class="fa fa-sort"></i></th>
-                    <th>% New Visits <i class="fa fa-sort"></i></th>
-                    <th>Revenue <i class="fa fa-sort"></i></th>
+                    <th>ID<i class="fa fa-sort"></i></th>
+                    <th>标题<i class="fa fa-sort"></i></th>
+                    <th>原价<i class="fa fa-sort"></i></th>
+                    <th>折扣价<i class="fa fa-sort"></i></th>
+                     <th>类型<i class="fa fa-sort"></i></th>
+                    <th>状态<i class="fa fa-sort"></i></th>
+                    <th>创建人<i class="fa fa-sort"></i></th>
+                    <th>创建时间<i class="fa fa-sort"></i></th>
+                     <th></th>
+                    <th></th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr class="active">
-                    <td>/index.html</td>
-                    <td>1265</td>
-                    <td>32.3%</td>
-                    <td>$321.33</td>
+                <s:iterator value="#session.allLists">
+                	<tr class="active">
+                    <td><s:property value="id"/></td>
+                    <td><s:property value="title"/></td>
+                    <td><s:property value="price_old"/></td>
+                    <td><s:property value="price_new"/></td>
+                    <td><s:property value="type"/></td>
+                    <td><s:property value="state"/></td>
+                    <td><s:property value="create_person"/></td>
+                    <td><s:property value="create_time"/></td>
+                     <td>修改</td>
+                    <td>删除</td>
                   </tr>
-                  <tr class="success">
-                    <td>/about.html</td>
-                    <td>261</td>
-                    <td>33.3%</td>
-                    <td>$234.12</td>
-                  </tr>
-                  <tr class="warning">
-                    <td>/sales.html</td>
-                    <td>665</td>
-                    <td>21.3%</td>
-                    <td>$16.34</td>
-                  </tr>
-                  <tr class="danger">
-                    <td>/blog.html</td>
-                    <td>9516</td>
-                    <td>89.3%</td>
-                    <td>$1644.43</td>
-                  </tr>
-                  <tr>
-                    <td>/404.html</td>
-                    <td>23</td>
-                    <td>34.3%</td>
-                    <td>$23.52</td>
-                  </tr>
-                  <tr>
-                    <td>/services.html</td>
-                    <td>421</td>
-                    <td>60.3%</td>
-                    <td>$724.32</td>
-                  </tr>
-                  <tr>
-                    <td>/blog/post.html</td>
-                    <td>1233</td>
-                    <td>93.2%</td>
-                    <td>$126.34</td>
-                  </tr>
+                </s:iterator>
                 </tbody>
               </table>
             </div>

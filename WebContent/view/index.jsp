@@ -1,3 +1,4 @@
+<%@page contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html>
 <%@taglib uri="/struts-tags" prefix="s"%>
 <html>
@@ -231,7 +232,7 @@
                             </a>
                         </div><!-- .prev -->
 
-                        <h3 class="title"><s:property value="id"/></h3>
+                        <h3 class="title"><s:property value="title"/></h3>
                         <div class="cart">
                             <div class="price">
                                 <div class="vert">

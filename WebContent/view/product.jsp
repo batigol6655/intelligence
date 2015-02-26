@@ -1,3 +1,4 @@
+<%@page contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html>
 <%@taglib uri="/struts-tags" prefix="s" %>
 <html>
@@ -383,7 +384,7 @@
 				<div class="clear"></div>
 			    </div><!-- .tab3 .tab_body -->
 			    <div class="clear"></div>
-			</div>â<!-- #wrapper_tab -->
+			</div><!-- #wrapper_tab -->
 			<div class="clear"></div>
 		    </div><!-- .grid_12 -->
                     
