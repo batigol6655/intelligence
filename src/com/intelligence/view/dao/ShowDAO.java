@@ -16,6 +16,8 @@ import com.intelligence.common.PageHelpper;
 import com.intelligence.common.Pagination;
 import com.intelligence.manager.vo.ItContent;
 import com.intelligence.manager.vo.ItContentMapper;
+import com.intelligence.manager.vo.ItPicture;
+import com.intelligence.manager.vo.ItPictureMapper;
 import com.intelligence.manager.vo.ItTitle;
 import com.intelligence.manager.vo.ItTitleMapper;
 
@@ -38,5 +40,11 @@ public class ShowDAO extends JdbcDaoSupport  {
 		buf.append("select * from it_content where id="+id);
 		ItContentMapper mapper = new ItContentMapper();
 		return (ItContent)(this.getJdbcTemplate().query(buf.toString(), mapper)).get(0);
+	}
+	public List<ItPicture> findPicture(String id){
+		StringBuffer buf = new StringBuffer();
+		buf.append("select * from it_picture where title_id="+id);
+		ItPictureMapper mapper = new ItPictureMapper();
+		return this.getJdbcTemplate().query(buf.toString(), mapper);
 	}
 }

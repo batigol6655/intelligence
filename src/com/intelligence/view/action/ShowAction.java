@@ -26,6 +26,7 @@ import org.apache.struts2.interceptor.ServletRequestAware;
 import com.intelligence.common.DisposalCode;
 import com.intelligence.common.Pagination;
 import com.intelligence.manager.vo.ItContent;
+import com.intelligence.manager.vo.ItPicture;
 import com.intelligence.manager.vo.ItTitle;
 import com.intelligence.view.service.ShowService;
 import com.opensymphony.xwork2.ActionContext;
@@ -40,6 +41,7 @@ public class ShowAction extends ActionSupport implements ServletRequestAware {
 	private ShowService showService;
 	private ItTitle it;
 	private ItContent itContent;
+	private ArrayList<ItPicture> picture;
 	public String list() throws Exception{
 			allLists = (ArrayList<ItTitle>) showService.list();
 			request.getSession().setAttribute("allLists", allLists);
@@ -48,9 +50,10 @@ public class ShowAction extends ActionSupport implements ServletRequestAware {
 	public String detail() throws Exception{
 		it = showService.find(request.getParameter("id"));
 		itContent = showService.findContent(it.getContent_id());
-		System.out.println(itContent.getContent()+"------------------------");
+		picture = (ArrayList<ItPicture>)showService.findPicture(request.getParameter("id"));
 		request.getSession().setAttribute("it", it);
 		request.getSession().setAttribute("itContent", itContent);
+		request.getSession().setAttribute("picture", picture);
 		return SUCCESS;
 	}
 
@@ -89,6 +92,13 @@ public class ShowAction extends ActionSupport implements ServletRequestAware {
 	}
 	public void setItContent(ItContent itContent) {
 		this.itContent = itContent;
+	}
+	
+	public ArrayList<ItPicture> getPicture() {
+		return picture;
+	}
+	public void setPicture(ArrayList<ItPicture> picture) {
+		this.picture = picture;
 	}
 	@Override
 	public void setServletRequest(HttpServletRequest request) {

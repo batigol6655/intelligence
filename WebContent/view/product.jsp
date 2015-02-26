@@ -193,12 +193,12 @@
 			</div><!-- .next_prev -->
 
 			<ul class="small_img clearfix" id="thumblist">
-			    <li><a class="zoomThumbActive" href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: './img/content/product1.png',largeimage: './img/content/product1.png'}"><img src='img/content/product1.png' alt=""></a></li>
-			    <li><a href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: './img/content/product2.png',largeimage: './img/content/product2.png'}"><img src='img/content/product2.png' alt=""></a></li>
-			    <li><a href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: './img/content/product3.png',largeimage: './img/content/product3.png'}"><img src='img/content/product3.png' alt=""></a></li>
-			    <li><a href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: './img/content/product4.png',largeimage: './img/content/product4.png'}"><img src='img/content/product4.png' alt=""></a></li>
-			    <li><a href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: './img/content/product5.png',largeimage: './img/content/product5.png'}"><img src='img/content/product5.png' alt=""></a></li>
-			</ul><!-- .small_img -->
+			    <li><a class="zoomThumbActive" href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: '<s:property value='#session.it.picture_link'/>',largeimage: '<s:property value='#session.it.picture_link'/>'}"><img src="<s:property value='#session.it.picture_link'/>" alt=""></a></li>
+			    <s:iterator value="#session.picture">
+			    	<li><a class="zoomThumbActive" href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: '<s:property value='picture_name'/>',largeimage: '<s:property value='picture_name'/>'}"><img src="<s:property value='picture_name'/>" alt=""></a></li>
+			    
+			    </s:iterator>
+			    </ul><!-- .small_img -->
 
 			<div id="pagination"></div>
 		    </div><!-- .grid_5 -->
