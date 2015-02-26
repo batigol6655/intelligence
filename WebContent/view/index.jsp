@@ -226,7 +226,9 @@
                 		 <article class="grid_3 article">
                         <img class="sale" src="img/sale.png" alt="Sale">
                         <div class="prev">
-                            <a href="product_page.html"><img src="img/content/product1.png" alt="Product 1" title=""></a>
+                            <a href="../show/detail.action?id=<s:property value='id'/>">
+                            	<img src="<s:property value='picture_link'/>" alt="Product 1" title="">
+                            </a>
                         </div><!-- .prev -->
 
                         <h3 class="title"><s:property value="id"/></h3>

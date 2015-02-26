@@ -9,6 +9,7 @@ import com.bringspring.gateway.dao.showDao;
 import com.bringspring.gateway.vo.CarPicture;
 import com.bringspring.gateway.vo.TradInfo;
 import com.intelligence.common.Pagination;
+import com.intelligence.manager.vo.ItContent;
 import com.intelligence.manager.vo.ItTitle;
 import com.intelligence.view.dao.ShowDAO;
 
@@ -33,6 +34,18 @@ public class ShowServiceImp implements ShowService {
 	@Override
 	public List<ItTitle> list() throws Exception {
 		return showDAO.list();
+	}
+
+
+	@Override
+	public ItTitle find(String id) throws Exception {
+		return showDAO.findById(id);
+	}
+
+
+	@Override
+	public ItContent findContent(String id) throws Exception {
+		return showDAO.findContent(id);
 	}
 	
 	

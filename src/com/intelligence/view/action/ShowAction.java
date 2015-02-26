@@ -25,6 +25,7 @@ import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.interceptor.ServletRequestAware;
 import com.intelligence.common.DisposalCode;
 import com.intelligence.common.Pagination;
+import com.intelligence.manager.vo.ItContent;
 import com.intelligence.manager.vo.ItTitle;
 import com.intelligence.view.service.ShowService;
 import com.opensymphony.xwork2.ActionContext;
@@ -37,12 +38,21 @@ public class ShowAction extends ActionSupport implements ServletRequestAware {
 	private HttpServletRequest request;
 	private ArrayList<ItTitle> allLists;
 	private ShowService showService;
+	private ItTitle it;
+	private ItContent itContent;
 	public String list() throws Exception{
 			allLists = (ArrayList<ItTitle>) showService.list();
 			request.getSession().setAttribute("allLists", allLists);
 			return SUCCESS;
 	}
-	
+	public String detail() throws Exception{
+		it = showService.find(request.getParameter("id"));
+		itContent = showService.findContent(it.getContent_id());
+		System.out.println(itContent.getContent()+"------------------------");
+		request.getSession().setAttribute("it", it);
+		request.getSession().setAttribute("itContent", itContent);
+		return SUCCESS;
+	}
 
 	public ArrayList<ItTitle> getAllLists() {
 		return allLists;
@@ -66,7 +76,20 @@ public class ShowAction extends ActionSupport implements ServletRequestAware {
 		this.request = request;
 	}
 
-
+	
+	public ItTitle getIt() {
+		return it;
+	}
+	public void setIt(ItTitle it) {
+		this.it = it;
+	}
+	
+	public ItContent getItContent() {
+		return itContent;
+	}
+	public void setItContent(ItContent itContent) {
+		this.itContent = itContent;
+	}
 	@Override
 	public void setServletRequest(HttpServletRequest request) {
 		// TODO Auto-generated method stub

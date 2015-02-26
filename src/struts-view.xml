@@ -10,19 +10,8 @@
     	<action name="list" class="com.intelligence.view.action.ShowAction" method="list">
     		<result type="redirect">/view/index.jsp</result>
     	</action>
-      <action name="all" class="com.intelligence.view.action.ShowAction" method="listAll">
-            <result type="redirect">/view/all.jsp</result>
-        </action>
-      <action name="list_new" class="com.intelligence.view.action.ShowAction" method="list">
-        </action>
-      <action name="load" class="com.intelligence.view.action.ShowAction" method="load">
-        </action>
         <action name="detail" class="com.intelligence.view.action.ShowAction" method="detail">
-            <result type="redirect">/jsp/detail.jsp</result>
-        </action>
-        <action name="getInParts" class="com.intelligence.view.action.ShowAction" method="getInParts">
-        </action>
-         <action name="getTradInfo" class="com.intelligence.view.action.ShowAction" method="getTradInfo">
+        	<result type="redirect">/view/product.jsp</result>
         </action>
     </package>
     

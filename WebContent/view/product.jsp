@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@taglib uri="/struts-tags" prefix="s" %>
 <html>
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
@@ -28,6 +29,7 @@
     <script src="js/jquery.anythingslider.js"></script>
     <script src="js/jquery.anythingslider.fx.js"></script>
 </head>
+<s:debug></s:debug>
 <body>
     <div id="top">
         <div class="container_12">
@@ -171,7 +173,7 @@
         <div class="container_12">
             <div id="content" class="grid_12">
                 <header>
-                    <h1 class="page_title">handmade Cut Emerald Ring</h1>
+                    <h1 class="page_title"><s:property value="#session.it.title"/></h1>
                 </header>
                     
                 <article class="product_page">
@@ -179,8 +181,8 @@
 			<img class="sale" src="img/sale.png" alt="Sale">
 			<div class="preview slides_container">
 			    <div class="prev_bg">
-				<a href="img/content/product1.png" class="jqzoom" rel='gal1' title="">
-				    <img src="img/content/product1.png" alt="Product 1" title="">
+				<a href="<s:property value='#session.it.picture_link'/>" class="jqzoom" rel='gal1' title="">
+				    <img src="<s:property value='#session.it.picture_link'/>" alt="Product 1" title="">
 				</a>
 			    </div>
 			</div><!-- .preview -->
@@ -218,12 +220,12 @@
 			        <a class="add_review" href="#">ADD YOUR REVIEW</a>
 			    </div>
                             
-			    <p>Duis mollis, augue rutrum viverra pellentesque, odio lacus feugiat neque, eget pulvinar enim dui vitae enim. Suspendisse adipiscing sollicitudin scelerisque.  Vivamus mattis lacinia nulla vel adipiscing. Phasellus et lacus at eros scelerisque auctor eu eu nisl.</p>
+			    <p><s:property value="#session.itContent.describe"/></p>
                             
                             <div class="ava_price">
                                 <div class="price">
-                                    <div class="price_old">$1,725.00</div>
-                                    $1,550.00
+                                    <div class="price_old">￥<s:property value="#session.it.price_new"/></div>
+                                   		 ￥<s:property value="#session.it.price_old"/>
 				</div><!-- .price -->
                                 
 				<div class="availability_sku">
@@ -267,26 +269,8 @@
 			    <div class="clear"></div>
 
 			    <div class="tab1 tab_body">
-				<h4>About This Item</h4>
-				<p>Suspendisse at placerat turpis. Duis luctus erat vel magna pharetra aliquet. Maecenas tincidunt feugiat ultricies. Phasellus et dui risus. Vestibulum adipiscing, eros quis lobortis dictum. Etiam mollis volutpat odio, id euismod justo gravida a. Aliquam erat volutpat. Phasellus faucibus venenatis lorem, vitae commodo elit pretium et. Duis rhoncus lobortis congue. Vestibulum et purus dui, vel porta lectus. Sed vulputate pulvinar adipiscing.</p>
-                                <ul>
-				    <li>She was walking to the mall.</li>
-				    <li>Ted might eat the cake.</li>
-				    <li>You must go right now.</li>
-				    <li>Words were spoken.</li>
-				    <li>The teacher is writing a report.</li>
-				</ul>
-
-				<p>Here are some verb phrase examples where the verb phrase is the predicate of a sentence. In this case, the verb phrase consists of the main verb plus any auxiliary, or helping, verbs. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede.</p>
-				<ol>
-				    <li>Shipping & Delivery.</li>
-				    <li>Privacy & Security.</li>
-				    <li>Returns & Replacements.</li>
-				    <li>Payment, Pricing & Promotions.</li>
-				    <li>Viewing Orders.</li>
-				</ol>
-                                <p>Next are some verb phrase examples of verb phrases where the phrase has a single function which means it can act like an adverb or an adjective. The phrase would include the verb and any modifiers, complements, or objects. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec posuere odio. Proin vel ultrices erat.</p>
-                                <div class="clear"></div>
+					<s:property value="#session.itContent.content"/>
+                <div class="clear"></div>
 			    </div><!-- .tab1 .tab_body -->
 
 			    <div class="tab2 tab_body">
@@ -399,7 +383,7 @@
 				<div class="clear"></div>
 			    </div><!-- .tab3 .tab_body -->
 			    <div class="clear"></div>
-			</div>​<!-- #wrapper_tab -->
+			</div>â<!-- #wrapper_tab -->
 			<div class="clear"></div>
 		    </div><!-- .grid_12 -->
                     
@@ -608,7 +592,7 @@
         <div class="footer_info">
             <div class="container_12">
                 <div class="grid_6">
-                    <p class="copyright">© Diamond Store Theme, 2013.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+                    <p class="copyright">Â© Diamond Store Theme, 2013.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="æ¨¡æ¿ä¹å®¶">æ¨¡æ¿ä¹å®¶</a> - Collect from <a href="http://www.cssmoban.com/" title="ç½é¡µæ¨¡æ¿" target="_blank">ç½é¡µæ¨¡æ¿</a></p>
                 </div><!-- .grid_6 -->
 
                 <div class="grid_6">

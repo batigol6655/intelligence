@@ -7,6 +7,7 @@ import java.sql.Timestamp;
 public class ItTitle {
 	private String id;									//id
 	private String title;								//标题
+	private String picture_link;//图片链接
 	private Timestamp create_time;				//创建时间
 	private String create_person;					//创建人
 	private String type;								//类型
@@ -67,6 +68,12 @@ public class ItTitle {
 	}
 	public void setState(String state) {
 		this.state = state;
+	}
+	public String getPicture_link() {
+		return picture_link;
+	}
+	public void setPicture_link(String picture_link) {
+		this.picture_link = picture_link;
 	}
 	
 }

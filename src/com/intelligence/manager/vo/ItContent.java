@@ -10,6 +10,7 @@ public class ItContent {
 	private String color;
 	private String suitable;
 	private String content;
+	private String describe;
 	public String getId() {
 		return id;
 	}
@@ -51,6 +52,12 @@ public class ItContent {
 	}
 	public void setContent(String content) {
 		this.content = content;
+	}
+	public String getDescribe() {
+		return describe;
+	}
+	public void setDescribe(String describe) {
+		this.describe = describe;
 	}
 	
 	

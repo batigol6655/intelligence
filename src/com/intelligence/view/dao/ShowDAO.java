@@ -14,6 +14,8 @@ import com.bringspring.gateway.vo.TradInfoMapper;
 import com.bringspring.gateway.vo.TradInfo;
 import com.intelligence.common.PageHelpper;
 import com.intelligence.common.Pagination;
+import com.intelligence.manager.vo.ItContent;
+import com.intelligence.manager.vo.ItContentMapper;
 import com.intelligence.manager.vo.ItTitle;
 import com.intelligence.manager.vo.ItTitleMapper;
 
@@ -25,5 +27,16 @@ public class ShowDAO extends JdbcDaoSupport  {
 		ItTitleMapper mapper = new ItTitleMapper();
 		return this.getJdbcTemplate().query(buf.toString(), mapper);
 	}
-	
+	public ItTitle findById(String id){
+		StringBuffer buf = new StringBuffer();
+		buf.append("select * from it_title where id="+id);
+		ItTitleMapper mapper = new ItTitleMapper();
+		return (ItTitle)(this.getJdbcTemplate().query(buf.toString(), mapper)).get(0);
+	}
+	public ItContent findContent(String id) {
+		StringBuffer buf = new StringBuffer();
+		buf.append("select * from it_content where id="+id);
+		ItContentMapper mapper = new ItContentMapper();
+		return (ItContent)(this.getJdbcTemplate().query(buf.toString(), mapper)).get(0);
+	}
 }

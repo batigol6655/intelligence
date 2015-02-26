@@ -19,6 +19,7 @@ public Object mapRow(ResultSet rs, int rowNum)throws SQLException{
     it.setPrice_new(rs.getDouble("PRICE_NEW"));
     it.setState(rs.getString("STATE"));
     it.setContent_id(rs.getString("CONTENT_ID"));
+    it.setPicture_link("img/picture/"+rs.getString("PICTURE_LINK"));
     return it;
   }
 }
